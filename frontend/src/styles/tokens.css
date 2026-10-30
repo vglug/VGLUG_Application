@@ -1,0 +1,108 @@
+/* VGLUG design tokens. Brand colours are fixed; everything else derives from them.
+   Square corners only: this project never uses border-radius. */
+
+:root {
+  /* Brand (exact) */
+  --brand-burgundy: #46050d;
+  --brand-ivory: #f3f1ea;
+  --brand-terracotta: #c3543e;
+
+  --font-display: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3 Variable', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+
+  --container: 1200px;
+  --measure: 70ch;
+  --header-h: 72px;
+  --rule: 1px;
+  --rule-strong: 2px;
+  --shadow-offset: 6px;
+  --section-pad: clamp(4rem, 8vw, 7.5rem);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 140ms;
+  --t-med: 240ms;
+}
+
+/* Light theme (default) */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: var(--brand-ivory);
+  --bg-alt: #ebe7dc;
+  --surface: #fbfaf6;
+  --surface-raised: #ffffff;
+  --text: var(--brand-burgundy);
+  --text-strong: #2b0207;
+  --text-muted: #6a3a3d;
+  --border: #d6cdbd;
+  --border-strong: var(--brand-burgundy);
+  --accent: var(--brand-terracotta);
+  --accent-text: #a63f2b; /* terracotta darkened for 4.5:1 text contrast on ivory */
+  --on-accent: #ffffff;
+  --primary: var(--brand-burgundy);
+  --on-primary: var(--brand-ivory);
+  --focus: #1f5fbf;
+  --grid-line: rgba(70, 5, 13, 0.06);
+  --code-bg: #efe9dc;
+  --success: #1d6b3a;
+  --success-bg: #e3f1e6;
+  --warning: #7a4b00;
+  --warning-bg: #f8ecd2;
+  --danger: #a1181f;
+  --danger-bg: #f8e1e0;
+  --info-bg: #e9e4f3;
+  --overlay: rgba(43, 2, 7, 0.55);
+  --hard-shadow: var(--brand-burgundy);
+  /* Warm peach tint derived from terracotta, used for alternating bands. */
+  --peach: #f1ddd1;
+  --peach-soft: #f6ebe3;
+  --on-peach: var(--brand-burgundy);
+  --band: var(--brand-burgundy);
+  --on-band: var(--brand-ivory);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #170a0c;
+  --bg-alt: #1f0f12;
+  --surface: #241316;
+  --surface-raised: #2d181c;
+  --text: var(--brand-ivory);
+  --text-strong: #ffffff;
+  --text-muted: #cdbcb3;
+  --border: #4a2a2f;
+  --border-strong: var(--brand-ivory);
+  --accent: var(--brand-terracotta);
+  --accent-text: #ec8c76; /* lighter terracotta for contrast on dark surfaces */
+  --on-accent: #ffffff;
+  --primary: var(--brand-ivory);
+  --on-primary: var(--brand-burgundy);
+  --focus: #8ab4ff;
+  --grid-line: rgba(243, 241, 234, 0.05);
+  --code-bg: #2f1a1e;
+  --success: #8fd6a6;
+  --success-bg: #173523;
+  --warning: #f2c46d;
+  --warning-bg: #3b2a0b;
+  --danger: #ff9c97;
+  --danger-bg: #401416;
+  --info-bg: #2a2236;
+  --overlay: rgba(0, 0, 0, 0.65);
+  --hard-shadow: var(--brand-terracotta);
+  --peach: #2c1714;
+  --peach-soft: #221112;
+  --on-peach: var(--brand-ivory);
+  --band: #3a120f;
+  --on-band: var(--brand-ivory);
+}
